@@ -27,7 +27,7 @@ export async function callGeminiAPI(text) {
   const prompt = {
     contents: [{
       parts: [{
-        text: `Summarize and structure the following text into concise, well-organized notes. Focus only on the key points and important information from the provided text. Use appropriate HTML formatting:
+        text: `Summarize and structure the following text into concise, well-organized notes. Use EASY-LANGUAGE to explain the text. Use appropriate HTML formatting:
 
 ${text}
 
