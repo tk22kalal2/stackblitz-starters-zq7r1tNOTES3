@@ -1,0 +1,12 @@
+{
+  "name": "pdf-processor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "servor --reload",
+    "setup": "mkdir -p public/lib/tinymce && curl -L https://download.tiny.cloud/tinymce/community/tinymce_7.5.1.zip | tar -xz -C public/lib/tinymce --strip-components=1"
+  },
+  "dependencies": {
+    "servor": "^4.0.2"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Splitter with OCR and Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.15.349/pdf.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/cg09wsf15duw9av3kj5g8d8fvsxvv3uver3a95xyfm1ngtq4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body>
+  <h1>PDF Splitter with OCR and Notes</h1>
+  <input type="file" id="pdfUpload" accept="application/pdf">
+  <div class="controls">
+    <label for="startPage">First Page:</label>
+    <input type="number" id="startPage" min="1" placeholder="e.g., 1">
+    <label for="endPage">Last Page:</label>
+    <input type="number" id="endPage" min="1" placeholder="e.g., 3">
+    <button id="splitButton">Split and OCR PDF</button>
+  </div>
+  <div class="notes-controls" style="display: none;">
+    <button id="notesButton">Generate Notes</button>
+  </div>
+  <div class="loading" id="loadingIndicator">Processing... Please wait...</div>
+  <div class="text-preview" id="ocrTextPreview"></div>
+  
+  <div id="notesEditorContainer" style="display: none;">
+    <div class="editor-header">
+      <h2>Edit Notes</h2>
+      <button id="saveNotesButton">Save Notes</button>
+    </div>
+    <div id="notesEditor"></div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from './js/main.js';
+    document.addEventListener('DOMContentLoaded', initializeApp);
+  </script>
+</body>
+</html>
