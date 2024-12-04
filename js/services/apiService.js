@@ -45,7 +45,6 @@ Guidelines:
       temperature: 0.3,
       topK: 20,
       topP: 0.8,
-      maxOutputTokens: 1024,
     }
   };
 
